@@ -1,7 +1,5 @@
 import yaml
 import csv
-import pandas as pd
-
 
 output_lines = []    
 #Load yaml
@@ -22,7 +20,7 @@ for i in fixed_g:
 recent_g = [i for i in data['events'].values()][-10:]
 for row in recent_g:
     line = [row['name']+" ("+str(row['start_on'])+")",row['id'],""]
-    line.append(100-0.01*(row['rare']+row['supa']+row['uber']))
+    line.append(int((10000-(row['rare']+row['supa']+row['uber'])))/100)
     line.append(row['uber']/100)
     line.append(row['supa']/100)
     line = line + [''] + gdata[int(row['id'])]
