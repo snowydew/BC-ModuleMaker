@@ -11,3 +11,9 @@ Files Needed in /Raw
         1_ja for Japanese
     /bc-en.yaml
 </pre>
+
+<pre>
+Python Modules needed
+    Pandas
+    PyYaml
+</pre>
